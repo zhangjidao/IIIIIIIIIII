@@ -1,0 +1,221 @@
+local OrionLib =
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zhangjidao/zhangjidao/main/kmui.lua"))()
+local Window = OrionLib:MakeWindow({Name = "u脚本", HidePremium = false, SaveConfig = false, IntroText = "ud大傻逼", ConfigFolder = "ud大傻逼"})
+
+OrionLib:MakeNotification({
+	Name = "欢迎使用傻逼脚本",
+	Content =  "当前游戏ID为:" .. game.GameId .. ".",
+	Image = "rbxassetid://7734068321",
+	Time = 5
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "公告",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("sm","吊打ud")
+
+Tab:AddParagraph("大傻逼ud","大傻逼，吊打ud（作者大傻逼）")
+local Tab = Window:MakeTab({
+	Name = "doors",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+
+
+local Section = Tab:AddSection({
+	Name = "功能"
+})
+
+
+
+Tab:AddButton({
+	Name = "十字架",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
+  	end
+})
+Tab:AddButton({
+	Name = "夜视仪",
+	Callback = function()		loadstring(game:HttpGet('https://raw.githubusercontent.com/DeividComSono/Scripts/main/Scanner.lua'))()
+  	end
+})
+Tab:AddButton({
+	Name = "变怪(Q关闭，R恢复)",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAccelerator/Public-Scripts/main/Morphing/MorphScript.lua"))()
+	end
+})
+
+Tab:AddButton({
+	Name = "剪刀",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/MrNeRD0/Doors-Hack/main/shears_done.lua"))()
+	end
+})
+
+Tab:AddButton({
+	Name = "磁铁",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/PenguinManiack/Crucifix/main/Crucifix.lua'))()
+  	end
+})
+local Tab = Window:MakeTab({
+	Name = "通用",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+
+
+local Section = Tab:AddSection({
+	Name = "功能"
+})
+
+
+
+Tab:AddButton({
+	Name = "飞行",
+	Callback = function()
+	loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+  	end
+})
+Tab:AddButton({
+	Name = "键盘",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+  	end
+})
+Tab:AddButton({
+	Name = "鼠标",
+	Callback = function()
+    loadstring(game:HttpGet(('https://pastefy.ga/V75mqzaz/raw'),true))()
+  	end
+})
+
+Tab:AddToggle({
+	Name = "穿墙",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    Noclip = true
+		    Stepped = game.RunService.Stepped:Connect(function()
+			    if Noclip == true then
+				    for a, b in pairs(game.Workspace:GetChildren()) do
+                        if b.Name == game.Players.LocalPlayer.Name then
+                            for i, v in pairs(game.Workspace[game.Players.LocalPlayer.Name]:GetChildren()) do
+                                if v:IsA("BasePart") then
+                                    v.CanCollide = false
+                                end
+                            end
+                        end
+                    end
+			    else
+				    Stepped:Disconnect()
+			    end
+		    end)
+	    else
+		    Noclip = false
+	    end
+	end
+})
+Tab:AddTextbox({
+	Name = "跳跃高度设置",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end
+})
+
+Tab:AddTextbox({
+	Name = "重力设置",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Workspace.Gravity = Value
+	end
+})
+
+Tab:AddToggle({
+	Name = "夜视",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+		else
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+		end
+	end
+})
+
+Tab:AddButton({
+	Name = "透视",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/PSXhuge/1/114514/toushi"))()
+  	end
+})
+Tab:AddButton({
+	Name = "反挂机【防检测】",
+	Callback = function()
+		print("Anti Afk On")
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+		   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		   wait(1)
+		   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "脚本(付费白名单)",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+
+
+local Section = Tab:AddSection({
+	Name = "功能"
+})
+
+
+
+Tab:AddButton({
+	Name = "白(作者修狗)",
+	Callback = function()
+	_G["白脚本作者修狗"]="xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey"
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/wev666666/baijiaobengV2.0beta/main/%E7%99%BD%E8%84%9A%E6%9C%ACbeta'),true))() 	
+  	end
+})
+Tab:AddButton({
+	Name = "走马观花(作者红)",
+	Callback = function()
+loadstring(game:HttpGet("https://github.com/jsGay8s/RBX_DEV/raw/main/"..game.PlaceId..".lua"))("走马观花X-2023-04-24更新!")	
+  	end
+})
+local Tab = Window:MakeTab({
+	Name = "伐木大亨",
+	Icon = "rbxassetid://7734068321",
+	PremiumOnly = false
+})
+
+
+
+local Section = Tab:AddSection({
+	Name = "功能"
+})
+
+
+
+Tab:AddButton({
+	Name = "butt(收缩搭配键盘)",
+	Callback = function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/Butterisgood/butter-hub/main/Butterhub.txt'))()
+	end
+})
+
