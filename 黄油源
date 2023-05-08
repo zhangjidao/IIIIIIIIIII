@@ -17,8 +17,7 @@
             end
             
             local toggled = false
-            
-            -- # Switch Tabs # --
+          
             local switchingTabs = false
             function switchTab(new)
               if switchingTabs then return end
@@ -48,7 +47,6 @@
               switchingTabs = false
             end
             
-            -- # Drag, Stolen from Kiriot or Wally # --
             function drag(frame, hold)
                 if not hold then
                     hold = frame
