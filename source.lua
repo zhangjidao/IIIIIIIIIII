@@ -210,7 +210,7 @@ function Kavo.CreateLib(kavName, themeList)
     local infoContainer = Instance.new("Frame")
     local Dd = dq("TextButton")
     Dd.Name = "Open"
-Dd.Parent = dD
+Dd.Parent = ScreenGui
 Dd.BackgroundColor3 = Color3.fromRGB(74, 99, 135)
 Dd.Position = UDim2.new(0.839879155, 0, -0.0123076923, 0)
 Dd.BorderSizePixel = 2
@@ -224,7 +224,7 @@ Dd.Active = true
 Dd.Draggable = true
 Dd.MouseButton1Down:connect(function()
 TOGGLE = not TOGGLE
-dE.Visible = TOGGLE
+Main.Visible = TOGGLE
 Dd.Text = TOGGLE and "隐藏" or "打开"
 end)
 
