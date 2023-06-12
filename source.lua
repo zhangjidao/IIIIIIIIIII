@@ -208,7 +208,7 @@ function Kavo.CreateLib(kavName, themeList)
     local pages = Instance.new("Frame")
     local Pages = Instance.new("Folder")
     local infoContainer = Instance.new("Frame")
-    local Dd = dq("TextButton")
+    local Dd = Instance.new("TextButton")
     Dd.Name = "Open"
 Dd.Parent = ScreenGui
 Dd.BackgroundColor3 = Color3.fromRGB(74, 99, 135)
