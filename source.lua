@@ -208,6 +208,25 @@ function Kavo.CreateLib(kavName, themeList)
     local pages = Instance.new("Frame")
     local Pages = Instance.new("Folder")
     local infoContainer = Instance.new("Frame")
+    local Dd = dq("TextButton")
+    Dd.Name = "Open"
+Dd.Parent = dD
+Dd.BackgroundColor3 = Color3.fromRGB(74, 99, 135)
+Dd.Position = UDim2.new(0.839879155, 0, -0.0123076923, 0)
+Dd.BorderSizePixel = 2
+Dd.BorderColor3 = Color3.fromRGB(58, 69, 80)
+Dd.Size = UDim2.new(0, 55, 0, 25)
+Dd.Font = Enum.Font.SourceSans
+Dd.Text = "隐藏"
+Dd.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dd.TextSize = 14.000
+Dd.Active = true
+Dd.Draggable = true
+Dd.MouseButton1Down:connect(function()
+TOGGLE = not TOGGLE
+dE.Visible = TOGGLE
+Dd.Text = TOGGLE and "隐藏" or "打开"
+end)
 
     local blurFrame = Instance.new("Frame")
 
