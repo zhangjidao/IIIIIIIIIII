@@ -227,9 +227,7 @@ function lib:Notify(top, bottom)
 	main_text.Text = top
 	main_text.TextColor3 = Color3.fromRGB(255, 255, 255)
 	main_text.TextSize = 22.000
-	main_text.Active = true
-    main_text.Draggable = true
-
+	
 	Close.MouseButton1Click:Connect(function()
 		local text = TextSolid
 		local topbar = TopBar
@@ -1786,6 +1784,8 @@ function lib:Main()
 	main.CategoryContainer.Parent = main.MainBody
 	main.CategoryPadding.Parent = main.CategoryContainer
 	main.CategoryLayout.Parent = main.CategoryContainer
+	main.Active = true
+    main.Draggable = true
 
 	return main
 end
