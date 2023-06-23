@@ -143,7 +143,7 @@ function lib:Main()
 		Position = UDim2.new(0.19138819, 0, 0.105, 0),
 		Size = UDim2.new(0, 87, 0, 30),
 		Font = Enum.Font.GothamBold,
-		Text = 'mobile',
+		Text = '',
 		TextColor3 = Color3.fromRGB(255, 255, 255),
 		TextSize = 20.000,
 		TextXAlignment = Enum.TextXAlignment.Left
@@ -155,7 +155,7 @@ function lib:Main()
 		BackgroundTransparency = 1.000,
 		Position = UDim2.new(0.958662987, 0, 0.250000001, 0),
 		Size = UDim2.new(0, 15, 0, 15),
-		Image = "",
+		Image = "rbxassetid://3570695787",
 		ImageColor3 = Color3.fromRGB(255, 0, 4),
 		ScaleType = Enum.ScaleType.Slice,
 		SliceCenter = Rect.new(100, 100, 100, 100),
