@@ -1,23 +1,8 @@
 local lib = {}
 
-local gameName
-if game.PlaceId==13822889 then
-    gameName="  Lumber Tycoon 2"
-elseif game.PlaceId==292439477 then
-    gameName="Phantom Forces"
-elseif game.PlaceId==142823291 then
-    gameName="  Murder Mystery 2"
-elseif game.PlaceId==286090429 then
-    gameName="Arsenal"
-elseif game.PlaceId==621129760 then
-    gameName="KAT"
-elseif game.PlaceId==3233893879 then
-    gameName=" Bad Business"
-elseif game.PlaceId==1554960397 then
-    gameName="   Car Dealership Tycoon"
-end;
-
-
+pcall(function()
+    game.CoreGui.Ancestor:Destroy();
+end)
 function lib:Create(type, proprieties)
 	local instance = Instance.new(type)
 
@@ -30,234 +15,7 @@ function lib:Create(type, proprieties)
 	return instance
 end
 
-function lib:Notify(top, bottom)
-	local NewUiLib = Instance.new("ScreenGui")
-	local notibody = Instance.new("Frame")
-	local TopBar = Instance.new("Frame")
-	local UIGradient = Instance.new("UIGradient")
-	local LogoTextFolder = Instance.new("Folder")
-	local LogoText = Instance.new("TextLabel")
-	local LogoText_2 = Instance.new("TextLabel")
-	local LogoText_3 = Instance.new("TextLabel")
-	local LogoText_4 = Instance.new("TextLabel")
-	local LogoText_5 = Instance.new("TextLabel")
-	local UIGradient_2 = Instance.new("UIGradient")
-	local Close = Instance.new("TextButton")
-	local UIGradient_3 = Instance.new("UIGradient")
-	local InfoText = Instance.new("TextLabel")
-	local TextSolid = Instance.new("Frame")
-
-	NewUiLib.Name = "NewUiLib"
-	NewUiLib.Parent = game.CoreGui.Ancestor
-
-	notibody.Name = "notibody"
-	notibody.Parent = NewUiLib
-	notibody.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	notibody.BorderSizePixel = 0
-	notibody.Position = UDim2.new(0, 689,0,389)
-	notibody.Size = UDim2.new(0, 367, 0, 168)
-	notibody.Active = true
-	notibody.Draggable = true
-	notibody.Selectable = true
-
-
-	TopBar.Name = "TopBar"
-	TopBar.Parent = notibody
-	TopBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TopBar.BorderSizePixel = 0
-	TopBar.Position = UDim2.new(0, 0, -0.178571433, 0)
-	TopBar.Size = UDim2.new(0, 367, 0, 30)
-
-	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 55, 167)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(50, 64, 140))}
-	UIGradient.Rotation = 90
-	UIGradient.Parent = TopBar
-
-	LogoTextFolder.Name = "LogoTextFolder"
-	LogoTextFolder.Parent = TopBar
-
-	LogoText.Name = "LogoText"
-	LogoText.Parent = LogoTextFolder
-	LogoText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	LogoText.BackgroundTransparency = 1.000
-	LogoText.BorderSizePixel = 0
-	LogoText.Position = UDim2.new(-0.0258602686, 0, -0.00833334029, 0)
-	LogoText.Size = UDim2.new(0, 52, 0, 30)
-	LogoText.Font = Enum.Font.GothamSemibold
-	LogoText.Text = "l"
-	LogoText.TextColor3 = Color3.fromRGB(65, 255, 65)
-	LogoText.TextSize = 27.000
-	LogoText.TextTransparency = 0.200
-
-	LogoText_2.Name = "LogoText"
-	LogoText_2.Parent = LogoTextFolder
-	LogoText_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	LogoText_2.BackgroundTransparency = 1.000
-	LogoText_2.BorderSizePixel = 0
-	LogoText_2.Position = UDim2.new(0.00754730683, 0, -0.00833334029, 0)
-	LogoText_2.Size = UDim2.new(0, 17, 0, 30)
-	LogoText_2.Font = Enum.Font.GothamSemibold
-	LogoText_2.Text = "¬"
-	LogoText_2.TextColor3 = Color3.fromRGB(17, 124, 255)
-	LogoText_2.TextSize = 27.000
-	LogoText_2.TextTransparency = 0.200
-
-	LogoText_3.Name = "LogoText"
-	LogoText_3.Parent = LogoTextFolder
-	LogoText_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	LogoText_3.BackgroundTransparency = 1.000
-	LogoText_3.BorderSizePixel = 0
-	LogoText_3.Position = UDim2.new(-0.0258602761, 0, -0.00833334029, 0)
-	LogoText_3.Size = UDim2.new(0, 47, 0, 30)
-	LogoText_3.Font = Enum.Font.GothamSemibold
-	LogoText_3.Text = "_-"
-	LogoText_3.TextColor3 = Color3.fromRGB(255, 28, 100)
-	LogoText_3.TextSize = 27.000
-	LogoText_3.TextTransparency = 0.200
-
-	LogoText_4.Name = "LogoText"
-	LogoText_4.Parent = LogoTextFolder
-	LogoText_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	LogoText_4.BackgroundTransparency = 1.000
-	LogoText_4.BorderSizePixel = 0
-	LogoText_4.Position = UDim2.new(0.0520840697, 0, -0.00833334029, 0)
-	LogoText_4.Size = UDim2.new(0, 87, 0, 30)
-	LogoText_4.Font = Enum.Font.GothamBold
-	LogoText_4.Text = "Sigma:"
-	LogoText_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-	LogoText_4.TextSize = 27.000
-	UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(38, 38, 38)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(18, 18, 18))}
-	UIGradient_2.Rotation = 90
-	UIGradient_2.Parent = notibody
-	LogoText_5.Name = "LogoText"
-	LogoText_5.Parent = LogoTextFolder
-	LogoText_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	LogoText_5.BackgroundTransparency = 1.000
-	LogoText_5.BorderSizePixel = 0
-	LogoText_5.Position = UDim2.new(0.193881869,0,0.125, 0)
-	LogoText_5.Size = UDim2.new(0, 87, 0, 30)
-	LogoText_5.Font = Enum.Font.GothamBold
-	LogoText_5.Text = tostring(gameName)
-	LogoText_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-	LogoText_5.TextSize = 14.000
-	UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(38, 38, 38)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(18, 18, 18))}
-	UIGradient_3.Rotation = 90
-	UIGradient_3.Parent = notibody
-
-	Close.Name = "Close"
-	Close.Parent = notibody
-	Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Close.BorderColor3 = Color3.fromRGB(139, 139, 139)
-	Close.Position = UDim2.new(0.71662128, 0, 0.807142735, 0)
-	Close.Size = UDim2.new(0, 93, 0, 26)
-	Close.Font = Enum.Font.SourceSans
-	Close.Text = "Close"
-	Close.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Close.TextSize = 18.000
-
-	UIGradient_3.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 55, 167)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(50, 64, 140))}
-	UIGradient_3.Rotation = 90
-	UIGradient_3.Parent = Close
-
-	InfoText.Name = "InfoText"
-	InfoText.Parent = Close
-	InfoText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	InfoText.BackgroundTransparency = 1.000
-	InfoText.BorderSizePixel = 0
-	InfoText.Position = UDim2.new(0.0549293756, 0, -0.00545230508, 0)
-	InfoText.Size = UDim2.new(0, 82, 0, 26)
-	InfoText.Font = Enum.Font.SourceSans
-	InfoText.Text = "Close"
-	InfoText.TextColor3 = Color3.fromRGB(255, 255, 255)
-	InfoText.TextSize = 16.000
-	InfoText.TextWrapped = true
-
-	TextSolid.Name = "TextSolid"
-	TextSolid.Parent = notibody
-	TextSolid.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	TextSolid.BackgroundTransparency = 1.000
-	TextSolid.Position = UDim2.new(0, 0, 0.0535714291, 0)
-	TextSolid.Size = UDim2.new(0, 367, 0, 118)
-
-	local ex = Instance.new("TextLabel")
-	local ImageLabel = Instance.new("ImageLabel")
-
-	ex.Name = "ex"
-	ex.Parent = TextSolid
-	ex.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	ex.BackgroundTransparency = 1.000
-	ex.BorderSizePixel = 0
-	ex.Position = UDim2.new(0.283691734, 0, 0.0427159443, 0)
-	ex.Size = UDim2.new(0, 158, 0, 30)
-	ex.Font = Enum.Font.GothamSemibold
-	ex.Text = "!"
-	ex.TextColor3 = Color3.fromRGB(255, 255, 255)
-	ex.TextSize = 22.000
-
-	ImageLabel.Parent = TextSolid
-	ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	ImageLabel.BackgroundTransparency = 1.000
-	ImageLabel.Position = UDim2.new(0.463275224, 0, 0.0710476488, 0)
-	ImageLabel.Size = UDim2.new(0, 24, 0, 24)
-	ImageLabel.Image = "http://www.roblox.com/asset/?id=5465179456"
-
-	local InfoText_2 = Instance.new("TextLabel")
-	local main_text = Instance.new("TextLabel")
-
-	InfoText_2.Name = "InfoText"
-	InfoText_2.Parent = TextSolid
-	InfoText_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	InfoText_2.BackgroundTransparency = 1.000
-	InfoText_2.BorderSizePixel = 0
-	InfoText_2.Position = UDim2.new(0.0384601317, 0, 0.543926656, 0)
-	InfoText_2.Size = UDim2.new(0, 341, 0, 59)
-	InfoText_2.Font = Enum.Font.SourceSans
-	InfoText_2.Text = bottom
-	InfoText_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-	InfoText_2.TextSize = 22.000
-	InfoText_2.TextWrapped = true
-
-	main_text.Name = "main_text"
-	main_text.Parent = TextSolid
-	main_text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	main_text.BackgroundTransparency = 1.000
-	main_text.BorderSizePixel = 0
-	main_text.Position = UDim2.new(0.346362025, 0, 0.297558546, 0)
-	main_text.Size = UDim2.new(0, 114, 0, 30)
-	main_text.Font = Enum.Font.GothamSemibold
-	main_text.Text = top
-	main_text.TextColor3 = Color3.fromRGB(255, 255, 255)
-	main_text.TextSize = 22.000
-	
-	Close.MouseButton1Click:Connect(function()
-		local text = TextSolid
-		local topbar = TopBar
-		local gui = notibody
-		local button = Close
-		for i=1,5 do
-			text:TweenPosition(text.Position + UDim2.new(0,0,0.05,0), "Out", "Linear", 0.1)
-			for i,v in pairs(text:GetChildren()) do
-				if v.Name == 'ImageLabel' then v.ImageTransparency = v.ImageTransparency + 0.3 else
-					v.TextTransparency = v.TextTransparency + 0.2
-				end
-			end
-			topbar:TweenPosition(topbar.Position - UDim2.new(0,0,0.05,0), "Out", "Linear", 0.1)
-			for i,v in pairs(topbar.LogoTextFolder:GetChildren()) do
-				v.TextTransparency = v.TextTransparency + 0.2
-			end
-			topbar.BackgroundTransparency = topbar.BackgroundTransparency + 0.2
-			button:TweenPosition(button.Position + UDim2.new(0,0,0.05,0), "Out", "Linear", 0.1)
-			button.InfoText.TextTransparency = button.InfoText.TextTransparency + 0.2
-			button.BackgroundTransparency = button.BackgroundTransparency + 0.2
-			button.TextTransparency = button.TextTransparency + 0.2
-			gui.BackgroundTransparency = gui.BackgroundTransparency + 0.2
-			wait(0.1)
-		end
-		gui:Destroy()
-	end)
-end
-
-
-local CoreGui = game:GetService("CoreGui")
+local CoreGui = game.CoreGui
 local TweenService = game:GetService("TweenService")
 local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
 local UIS = game:GetService("UserInputService")
@@ -312,13 +70,13 @@ function lib:Main()
 
 	main.TopBar = lib:Create("Frame", {
 		Name = "TopBar",
-		BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+		BackgroundColor3 = Color3.fromRGB(255, 0, 120),
 		BorderSizePixel = 0,
 		Size = UDim2.new(0, 554, 0, 40),
 	})
 
 	main.TopBarGradient = lib:Create("UIGradient", {
-		Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(33, 55, 167)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(50, 64, 140))},
+		Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(8, 45, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(8, 45, 255))},
 		Rotation = 90,
 	})
 
@@ -346,7 +104,7 @@ function lib:Main()
 		Position = UDim2.new(0.0129673611, 0, 0.125, 0),
 		Size = UDim2.new(0, 17, 0, 30),
 		Font = Enum.Font.GothamSemibold,
-		Text = "¬",
+		Text = "-",
 		TextColor3 = Color3.fromRGB(17, 124, 255),
 		TextSize = 27.000,
 		TextTransparency = 0.200,
@@ -373,7 +131,7 @@ function lib:Main()
 		Position = UDim2.new(0.0331138819, 0, 0.125, 0),
 		Size = UDim2.new(0, 87, 0, 30),
 		Font = Enum.Font.GothamBold,
-		Text = "Sigma:",
+		Text = "Ancestor",
 		TextColor3 = Color3.fromRGB(255, 255, 255),
 		TextSize = 27.000,
 	})
@@ -385,7 +143,7 @@ function lib:Main()
 		Position = UDim2.new(0.19138819, 0, 0.105, 0),
 		Size = UDim2.new(0, 87, 0, 30),
 		Font = Enum.Font.GothamBold,
-		Text = gameName,
+		Text = 'mobile',
 		TextColor3 = Color3.fromRGB(255, 255, 255),
 		TextSize = 20.000,
 		TextXAlignment = Enum.TextXAlignment.Left
@@ -397,7 +155,7 @@ function lib:Main()
 		BackgroundTransparency = 1.000,
 		Position = UDim2.new(0.958662987, 0, 0.250000001, 0),
 		Size = UDim2.new(0, 15, 0, 15),
-		Image = "rbxassetid://3570695787",
+		Image = "",
 		ImageColor3 = Color3.fromRGB(255, 0, 4),
 		ScaleType = Enum.ScaleType.Slice,
 		SliceCenter = Rect.new(100, 100, 100, 100),
@@ -413,7 +171,7 @@ function lib:Main()
 		Position = UDim2.new(0, 0, -0.466666669, 0),
 		Size = UDim2.new(0, 15, 0, 25),
 		Font = Enum.Font.SourceSans,
-		Text = "x",
+		Text = "X",
 		TextColor3 = Color3.fromRGB(255, 255, 255),
 		TextSize = 18.000,
 	})
@@ -557,9 +315,6 @@ function lib:Main()
 				})
 
 				buttons.button.MouseButton1Click:Connect(function()
-					if CallBack then 
-						CallBack()
-					end
 
 					if Animated then 
 						TweenService:Create(buttons.buttonframe, TweenInfo.new(0.1), {Size = UDim2.new(0, 440,0, 25),  Position = UDim2.new(0.047, 0,0.143, 0)}):Play()
@@ -567,6 +322,9 @@ function lib:Main()
 						wait(0.05)
 						TweenService:Create(buttons.buttonframe, TweenInfo.new(0.1), {Size = UDim2.new(0, 476,0, 29), Position = UDim2.new(0.01, 0,0.086, 0)}):Play()
 						TweenService:Create(buttons.button, TweenInfo.new(0.1), {Size = UDim2.new(0, 476,0, 29), Position = UDim2.new(0, 0,0, 0)}):Play()
+					end
+                    if CallBack then 
+						CallBack()
 					end
 				end)
 
@@ -1020,6 +778,7 @@ function lib:Main()
 					kb.kb.Text = kbind.Name
 				end
 				local debounce = false
+                local connections={};
 				kb.kb.MouseButton1Click:Connect(function()
 					if debounce then 
 						return
@@ -1047,13 +806,21 @@ function lib:Main()
 					end)
 				end)
 
-				game:GetService("UserInputService").InputBegan:Connect(function(i, GPE)
+				connections[#connections+1]=game:GetService("UserInputService").InputBegan:Connect(function(i, GPE)
 					if kbind and i.KeyCode == kbind and not GPE then
 						if CallBack then
 							CallBack(i.KeyCode)
 						end
 					end
-				end)
+				end);
+
+                connections[#connections+1]=game.CoreGui.ChildRemoved:Connect(function(Child)
+                    if tostring(Child)=='Ancestor'then
+                        for _,Connection in next,connections do 
+                            Connection:Disconnect();
+                        end;
+                    end;
+                end);
 
 				categories.Container.CanvasSize = categories.Container.CanvasSize + UDim2.new(0,0,0,40)
 
@@ -1076,9 +843,9 @@ function lib:Main()
 				elseif Options and Options.options and Playerlist then
 					optionstable = {}
 					for g,f in pairs(Options.options) do
-                        if i==1 then 
-                            i=5
-                        end
+						if i==1 then 
+							i=5
+						end
 						table.insert(optionstable, f)
 					end
 					local list = game:GetService("Players"):GetChildren()
@@ -1769,9 +1536,11 @@ function lib:Main()
 		game.CoreGui.Ancestor:Destroy()
 	end)
 
-	main.ScreenGui.Parent = CoreGui
+	main.ScreenGui.Parent = game.CoreGui
 	main.MainBody.Parent = main.ScreenGui
 	main.TopBar.Parent = main.MainBody
+	main.MainBody.Active = true
+    main.MainBody.Draggable = true
 	main.TopBarGradient.Parent = main.TopBar
 	main.LogoTextFolder.Parent = main.TopBar
 	main.LogoText1.Parent = main.LogoTextFolder
@@ -1784,8 +1553,6 @@ function lib:Main()
 	main.CategoryContainer.Parent = main.MainBody
 	main.CategoryPadding.Parent = main.CategoryContainer
 	main.CategoryLayout.Parent = main.CategoryContainer
-	main.Active = true
-    main.Draggable = true
 
 	return main
 end
