@@ -78,8 +78,8 @@ function Library:Initiate()
     Frame.Name = "Frame"
     Frame.Parent = MainFrame
     Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Frame.Position = UDim2.new(0, 0, 0, 0)
-    Frame.Size = UDim2.new(0, 700, 0, 3)
+    Frame.Position = UDim2.new(0, 0, 0, -5)
+    Frame.Size = UDim2.new(0, 700, 0, 5)
 
     UIGradient.Parent = Frame
 
