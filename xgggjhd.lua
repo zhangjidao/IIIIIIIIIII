@@ -52,6 +52,8 @@ function Library:Initiate()
     MainFrame.BorderSizePixel = 0
     MainFrame.Position = UDim2.new(0.5, -350, 0.5, -200)
     MainFrame.Size = UDim2.new(0, 700, 0, 460)
+    MainFrame.Active = true
+    MainFrame.Draggable = true
     UICorner_17.Parent = MainFrame
     UICorner_17.CornerRadius=UDim.new(0,6)
 
